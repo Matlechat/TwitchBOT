@@ -1,0 +1,5 @@
+{
+    "channel" : "YOUR_CHANNEL_NAME",
+    "username" : "YOUR_BOT_USERNAME",
+    "password" : "oauth:YOUR_BOT_OAUTH"
+}
