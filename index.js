@@ -45,13 +45,21 @@ client.on('message', (channel, user, message, self) => {
   }
 
   if (message.toUpperCase().startsWith("!RANK")) {
+    var correct_comm = true;
+    if (message.length >= 6) {
+      if (message[5] !== " ") correct_comm = false;
 
-    if (message.length > 7) {
       let pseudo = message.substring(6);
       console.log(pseudo);
       var username = pseudo.split("#")[0];
       var tag = pseudo.split("#")[1];
     }
+
+    if (!correct_comm) {
+      console.log("oui");
+      return;
+    }
+
 
     getValorantRank(username, tag, (rank) => {
       client.say(channel, `billieEZ ${rank} billieEZ`);
